@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 load_dotenv()
 
 sentences = ["This is an example sentence", "Each sentence is converted"]
-model_path = "models/keywords/jp"
+model_path = "models/en"
 
 if os.getenv("KEYWORD_ML_MODEL"):
     model_name = str(os.environ.get("KEYWORD_ML_MODEL"))

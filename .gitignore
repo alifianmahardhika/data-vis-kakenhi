@@ -154,3 +154,4 @@ cython_debug/
 *.model
 *.csv
 *.pickle
+*.bin
