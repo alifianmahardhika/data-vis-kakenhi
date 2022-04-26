@@ -37,7 +37,7 @@ async def get_nodes_keyword(req: KeywordQuery):
     from pandas import DataFrame
 
     try:
-        print("/get-nodes-keyword", req)
+        print("/get-institution", req)
         keywords_list, id_list, id_type = get_keywords(en_model, en_data, en_faiss, req.keywords, 50)
         ids = list(set(flatten_str_list(id_list)))
         select_field = {
