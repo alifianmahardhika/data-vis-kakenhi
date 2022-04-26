@@ -8,7 +8,7 @@ You can use Anaconda/Miniconda or use your own python virtual environment and in
 
 1. Install anaconda/miniconda by following the instruction here [anaconda/miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-2. The conda environment is provided as `environment.yml`. This environment is used for all testing by Github Actions and can be setup by:
+2. The conda environment is provided as `env.yml`. This environment is used for all testing by Github Actions and can be setup by:
 - `conda env create -f env.yml`
 - `conda activate kobe-u`
 
