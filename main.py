@@ -58,11 +58,12 @@ async def get_nodes_keyword(req: KeywordQuery):
             select_field,
             {"$limit" :  100},
         ]
+        print(pipeline)
         df = DataFrame(list(researchers.aggregate(pipeline)))
         return_data = list()
         for inst in list(df['institution'].unique()):
             researcher_profiles = list()
-            print(inst)
+            # print(inst)
             for profile_name in list(df[df["institution"]==inst]['name']):
                 ob = {"firstName": profile_name}
                 researcher_profiles.append(ob)
