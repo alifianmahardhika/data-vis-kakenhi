@@ -72,4 +72,3 @@ async def get_nodes_keyword(req: KeywordQuery):
     except:
         traceback.print_exc()
         return error_response
-
