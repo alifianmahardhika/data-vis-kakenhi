@@ -57,7 +57,7 @@ async def get_nodes_keyword(req: KeywordQuery):
                 ],
             }},
             select_field,
-            {"$limit" :  100},
+            {"$limit" :  200},
         ]
         print(pipeline)
         df = DataFrame(list(researchers.aggregate(pipeline)))
