@@ -24,3 +24,5 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app
 ```
+
+https://kakenhi-ml.herokuapp.com/docs
