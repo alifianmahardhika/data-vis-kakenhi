@@ -45,6 +45,7 @@ async def get_nodes_keyword(req: KeywordQuery):
             {
                 "institution" : "$institutionName.en",
                 "name" : "$name.en",
+                "kakenhiID": "$kakenhiID",
                 "_id" : 0
                 }
         }
