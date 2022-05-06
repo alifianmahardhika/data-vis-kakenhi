@@ -64,11 +64,13 @@ async def get_nodes_keyword(req: KeywordQuery):
         return_data = list()
         for inst in list(df['institution'].unique()):
             researcher_profiles = list()
-            # print(inst)
-            for profile_name in list(df[df["institution"]==inst]['name']):
-                ob = {"firstName": profile_name}
+            filtered_df = df[df["institution"]==inst][['name', 'kakenhiID']]
+            for idx in range(len(filtered_df)):
+                profile_name = filtered_df.iloc[idx][0] # name
+                kak_id = filtered_df.iloc[idx][1] # kakenhi ID
+                ob = {"firstName": profile_name, "kakenhiID": kak_id}
                 researcher_profiles.append(ob)
-        #     print({"institution": inst, "researcherProfiles": researcher_profiles})
+            print({"institution": inst, "researcherProfiles": researcher_profiles})
             return_data.append({"institution": inst, "researcherProfiles": researcher_profiles})
         return {"data": return_data}
     except:
