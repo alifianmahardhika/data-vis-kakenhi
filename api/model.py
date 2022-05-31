@@ -1,6 +1,6 @@
-from typing import Optional
 from pydantic import BaseModel
 
 class KeywordQuery(BaseModel):
-    keywords: Optional[str] = ''
-    resultnum: Optional[int] = 100
+    keywords: str = ''
+    threshold: float = 0.1
+    resultnum: int = 50
